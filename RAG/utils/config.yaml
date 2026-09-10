@@ -1,3 +1,5 @@
+pdf_path: "utils/hr_policy_detailed_5_pages.pdf"
+
 qdrant:
   host: "localhost"
   port: 6333

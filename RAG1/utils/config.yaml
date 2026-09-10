@@ -1,0 +1,31 @@
+pdf_path: "utils/HDFC_Bank_Annual_Report_2024_25-310202.pdf"
+
+app:
+  host: "127.0.0.1"
+  port: 8000
+
+pdf:
+  # Path to your PDF file in the root directory
+  path: "HDFC_Bank_Annual_Report_2024_25.pdf"
+  # Set to true if you want to skip marketing/narrative fluff
+  skip_early_pages: true
+  start_page: 208       # Page 208 starts Directors' Report & Financials
+  end_page: null        # null means read till the end
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 150
+
+embedding:
+  model: "nomic-embed-text:latest"
+  dimensions: 768
+
+vectorstore:
+  persist_directory: "./chroma_db"
+  collection_name: "hdfc_financials"
+
+llm:
+  model: "llama3.2:latest"
+  temperature: 0.0      # 0.0 for deterministic financial accuracy
+  top_k: 5
+

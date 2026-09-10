@@ -10,7 +10,7 @@ OLLAMA_URL = f"{OLLAMA_BASE_URL}/api/generate"
 EMBED_URL = f"{OLLAMA_BASE_URL}/api/embeddings"
 
 def load_config():
-    with open("config.yaml") as f:
+    with open("utils/config.yaml") as f:
         return yaml.safe_load(f)
 
 

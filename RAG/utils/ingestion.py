@@ -9,11 +9,11 @@ from utils.vectorstore import setup_collection, ingest_chunks
 
 import os
 
-PDF_PATH = os.getenv("PDF_PATH", "hr_policy_detailed_5_pages.pdf")
+PDF_PATH = os.getenv("PDF_PATH", "utils/hr_policy_detailed_5_pages.pdf")
 
 
 def load_config():
-    with open("config.yaml") as f:
+    with open("utils/config.yaml") as f:
         return yaml.safe_load(f)
 
 
